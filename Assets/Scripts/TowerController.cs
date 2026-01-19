@@ -8,10 +8,6 @@ public class TowerController : MonoBehaviour
 
     float shootTimer;
 
-    void Start()
-    {
-        
-    }
     void Update()
     {
         shootTimer += Time.deltaTime;
