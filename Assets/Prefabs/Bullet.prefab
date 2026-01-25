@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7821949850420115461}
   - component: {fileID: 416155138076343793}
   m_Layer: 0
-  m_Name: Sphere
+  m_Name: Bullet
   m_TagString: Bullet
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -153,3 +153,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfb2469b304e5b4a90862f1ca78d4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  _bulletSpeed: 10
+  _bulletLifeTime: 5

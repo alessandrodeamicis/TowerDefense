@@ -29,7 +29,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 3.94, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3763857890786253758}
@@ -136,9 +136,9 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6985567087723730383}
   serializedVersion: 2
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 1.47, y: 0, z: -0.07}
-  m_LocalScale: {x: 1, y: 0.266624, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.8, y: 0, z: -0.09}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3763857890786253758}
@@ -170,7 +170,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0.9908906, z: 0, w: 0.13466951}
   m_LocalPosition: {x: 5.82, y: 1.82, z: 7.75}
-  m_LocalScale: {x: 1, y: 3.7506, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7372797145313216751}
@@ -189,6 +189,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: af395080bafbf1f42944d90873b7b47d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TowerController
-  _spherePrefab: {fileID: 2964916769077638656, guid: 28bc4a71deee3154986958d5ce43bd15, type: 3}
+  _bulletPrefab: {fileID: 2964916769077638656, guid: 28bc4a71deee3154986958d5ce43bd15, type: 3}
   _shootingPoint: {fileID: 3201663387360553750}
   _shootPower: 10
