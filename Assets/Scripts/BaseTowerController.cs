@@ -1,7 +1,8 @@
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 
-public class TowerController : MonoBehaviour
+public class BaseTowerController : MonoBehaviour
 {
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _shootingPoint;
@@ -53,16 +54,14 @@ public class TowerController : MonoBehaviour
     private void CheckIfEnemyIsInRange()
     {
         Collider[] hitColliders = Physics.OverlapSphere(transform.position, _shootArea);
-        foreach (var hitCollider in hitColliders)
+        var hitCollider = hitColliders.FirstOrDefault(x => x.CompareTag("Enemy"));
+        if (hitCollider != null)
         {
-            if (hitCollider.CompareTag("Enemy"))
-            {
-                Vector3 direction = (hitCollider.transform.position - transform.position).normalized;
-                Quaternion rotation = Quaternion.LookRotation(direction);
-                _shootingPoint.localPosition = rotation * Vector3.forward;
-                _shootingPoint.rotation = rotation;
-                Shoot(direction, Vector3.Distance(transform.position, hitCollider.transform.position) * 2);
-            }
+            Vector3 direction = (hitCollider.transform.position - transform.position).normalized;
+            Quaternion rotation = Quaternion.LookRotation(direction);
+            _shootingPoint.localPosition = rotation * Vector3.forward;
+            _shootingPoint.rotation = rotation;
+            Shoot(direction, Vector3.Distance(transform.position, hitCollider.transform.position) * 2);
         }
     }
 }

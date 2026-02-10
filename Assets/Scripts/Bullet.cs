@@ -7,10 +7,10 @@ public class Bullet : MonoBehaviour
     [SerializeField]
     private float _bulletLifeTime = 5f;
 
-    private TowerController _towerController;
+    private BaseTowerController _towerController;
     private Rigidbody _rb;
 
-    public void Setup(TowerController towerController)
+    public void Setup(BaseTowerController towerController)
     {
         _towerController = towerController;
     }
