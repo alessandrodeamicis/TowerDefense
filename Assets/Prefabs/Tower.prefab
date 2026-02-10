@@ -67,7 +67,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: f96821bbefeea864b9b418af4b8615ac, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -137,7 +137,7 @@ Transform:
   m_GameObject: {fileID: 6985567087723730383}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.8, y: 0, z: -0.09}
+  m_LocalPosition: {x: 1.47, y: 0, z: -0.16}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -191,4 +191,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TowerController
   _bulletPrefab: {fileID: 2964916769077638656, guid: 28bc4a71deee3154986958d5ce43bd15, type: 3}
   _shootingPoint: {fileID: 3201663387360553750}
-  _shootPower: 10
+  _shootArea: 10

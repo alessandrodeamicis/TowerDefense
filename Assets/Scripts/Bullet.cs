@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    [SerializeField]
-    private float _bulletSpeed = 10f;
+    //[SerializeField]
+    //private float _bulletSpeed = 10f;
     [SerializeField]
     private float _bulletLifeTime = 5f;
 
@@ -25,11 +25,11 @@ public class Bullet : MonoBehaviour
         _towerController.ReleaseBullet(this);
     }
 
-    public void Shoot(Vector3 direction)
+    public void Shoot(Vector3 direction, float speed)
     {
         if (_rb == null) _rb = GetComponent<Rigidbody>();
 
-        _rb.linearVelocity = direction * _bulletSpeed;
+        _rb.linearVelocity = direction * speed;
         _rb.angularVelocity = Vector3.zero;
 
         CancelInvoke();

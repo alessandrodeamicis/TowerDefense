@@ -5,7 +5,7 @@ public class TowerController : MonoBehaviour
 {
     [SerializeField] private GameObject _bulletPrefab;
     [SerializeField] private Transform _shootingPoint;
-    [SerializeField] float _shootPower = 10f;
+    [SerializeField] float _shootArea = 10f;
 
     private float shootTimer;
     private Queue<Bullet> _bulletPool = new Queue<Bullet>();
@@ -16,16 +16,16 @@ public class TowerController : MonoBehaviour
 
         if (shootTimer >= 1f)
         {
-            Shoot();
+            CheckIfEnemyIsInRange();
             shootTimer = 0f;
         }
     }
 
-    private void Shoot()
+    private void Shoot(Vector3 direction, float shootPower)
     {
         Bullet b = GetBullet();
         b.transform.position = _shootingPoint.position;
-        b.Shoot(_shootingPoint.forward);
+        b.Shoot(direction, shootPower);
     }
 
     public Bullet GetBullet()
@@ -48,5 +48,21 @@ public class TowerController : MonoBehaviour
     {
         bullet.gameObject.SetActive(false);
         _bulletPool.Enqueue(bullet);
+    }
+
+    private void CheckIfEnemyIsInRange()
+    {
+        Collider[] hitColliders = Physics.OverlapSphere(transform.position, _shootArea);
+        foreach (var hitCollider in hitColliders)
+        {
+            if (hitCollider.CompareTag("Enemy"))
+            {
+                Vector3 direction = (hitCollider.transform.position - transform.position).normalized;
+                Quaternion rotation = Quaternion.LookRotation(direction);
+                _shootingPoint.localPosition = rotation * Vector3.forward;
+                _shootingPoint.rotation = rotation;
+                Shoot(direction, Vector3.Distance(transform.position, hitCollider.transform.position) * 2);
+            }
+        }
     }
 }
