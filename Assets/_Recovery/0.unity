@@ -154,7 +154,7 @@ MonoBehaviour:
   m_OverrideVoxelSize: 0
   m_VoxelSize: 0.16666667
   m_MinRegionArea: 2
-  m_NavMeshData: {fileID: 23800000, guid: 3e921b4c0200a1645a545c4d1a77b679, type: 2}
+  m_NavMeshData: {fileID: 23800000, guid: 24ca0a9a37c46384b8e934e0ea963f41, type: 2}
   m_BuildHeightMesh: 0
 --- !u!1 &330585543
 GameObject:
@@ -595,7 +595,7 @@ Transform:
   m_GameObject: {fileID: 744724862}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 31.46, y: 1, z: -2.9999998}
+  m_LocalPosition: {x: 4, y: 1, z: -2.9999998}
   m_LocalScale: {x: 25, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -893,7 +893,7 @@ Transform:
   m_GameObject: {fileID: 1455538897}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -28.96, y: 1, z: 3.0000002}
+  m_LocalPosition: {x: -4, y: 1, z: 3.0000002}
   m_LocalScale: {x: 25, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -933,7 +933,7 @@ MonoBehaviour:
   _deltaX: 5
   _deltaZ: 10
   _spawnFrequency: 4
-  _enemyNumber: 20
+  _enemyNumber: 5
 --- !u!4 &1623158699
 Transform:
   m_ObjectHideFlags: 0

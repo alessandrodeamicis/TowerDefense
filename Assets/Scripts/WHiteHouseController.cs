@@ -1,7 +1,7 @@
 using System;
 using UnityEngine;
 
-public class WHiteHouseController : MonoBehaviour
+public class WhiteHouseController : MonoBehaviour
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()

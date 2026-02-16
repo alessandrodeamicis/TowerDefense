@@ -34,6 +34,5 @@ public class SpawnController : MonoBehaviour
         Vector3 variation = new Vector3 (varX, 0);
         variation.z = varZ;
         GameObject enemy = Instantiate(_enemyPrefab, _shootingPoint.position + variation, Quaternion.identity);
-        Rigidbody sphereRb = enemy.GetComponent<Rigidbody>();
     }
 }
