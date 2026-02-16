@@ -22,11 +22,11 @@ public class BaseTowerController : MonoBehaviour
         }
     }
 
-    private void Shoot(Vector3 direction, float shootPower)
+    private void Shoot(Vector3 direction)
     {
         Bullet b = GetBullet();
         b.transform.position = _shootingPoint.position;
-        b.Shoot(direction, shootPower);
+        b.Shoot(direction);
     }
 
     public Bullet GetBullet()
@@ -61,7 +61,7 @@ public class BaseTowerController : MonoBehaviour
             Quaternion rotation = Quaternion.LookRotation(direction);
             _shootingPoint.localPosition = rotation * Vector3.forward;
             _shootingPoint.rotation = rotation;
-            Shoot(direction, Vector3.Distance(transform.position, hitCollider.transform.position) * 2);
+            Shoot(direction);
         }
     }
 }

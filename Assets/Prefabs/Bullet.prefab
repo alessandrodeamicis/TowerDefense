@@ -153,4 +153,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1dfb2469b304e5b4a90862f1ca78d4e8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  _bulletSpeed: 20
   _bulletLifeTime: 5
+  _bulletDamage: 2
